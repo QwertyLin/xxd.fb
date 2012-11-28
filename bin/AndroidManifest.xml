@@ -1,0 +1,68 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.xxd.fb"
+    android:versionCode="1"
+    android:versionName="12.12" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="8" />
+    
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  
+  <!-- ZM -->
+  <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  
+  <!-- youmi -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  
+  <!-- Baidu -->
+  <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
+  <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+ <!--  <uses-permission android:name="android.permission.READ_PHONE_STATE"/> -->
+  <uses-permission android:name="android.permission.READ_LOGS"/><!-- 错误日志统计 -->
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/QTheme" >
+        
+         <!-- baidu -->
+     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="none" />
+     <meta-data android:name="BaiduMobAd_STAT_ID" android:value="7cc90e5d3c" />
+     <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" /><!-- 错误日志统计 -->
+        
+     <!-- ZM -->
+       <meta-data android:name="ZHUAMOB_APPKEY" android:value="74c8c821ad1bd5eaf9a07a98" />
+       <meta-data android:name="ZHUAMOB_CHANNELID" android:value="none" />
+       <!-- 声明Youmi的Activity -->
+       <activity
+           android:name="net.youmi.android.AdActivity"
+           android:configChanges="keyboard|keyboardHidden|orientation" />
+       <!-- 有米广告条SDK3.08必须以下配置 -->
+       <receiver android:name="net.youmi.android.YoumiReceiver">
+           <intent-filter>
+               <action android:name="android.intent.action.PACKAGE_ADDED"/>
+               <action android:name="android.intent.action.PACKAGE_INSTALL"/>
+               <data android:scheme="package"/>
+           </intent-filter>
+       </receiver>   
+        
+        <activity
+            android:name=".MainA"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".LeagueA" android:screenOrientation="portrait"  />
+        <activity android:name=".LeagueBoardFragment" android:screenOrientation="portrait"  />
+    </application>
+
+</manifest>
