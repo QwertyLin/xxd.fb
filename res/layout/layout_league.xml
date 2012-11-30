@@ -4,9 +4,9 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     
-    <q.view.UnderlinePageIndicator
+    <q.view.TabPageIndicator
         android:id="@+id/league_indicator"
-        android:layout_height="2dp"
+        android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         />
     

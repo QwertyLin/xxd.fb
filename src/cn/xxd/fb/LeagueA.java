@@ -2,6 +2,8 @@ package cn.xxd.fb;
 
 import cn.xxd.fb.bean.League;
 
+import q.base.UiBaseHeader;
+import q.view.TabPageIndicator;
 import q.view.UnderlinePageIndicator;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,6 +19,7 @@ public class LeagueA extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_layout);
+		UiBaseHeader.btnBack(this, "西甲");
 		//
 		((FrameLayout)findViewById(R.id.base_layout)).addView(getLayoutInflater().inflate(R.layout.layout_league, null));
 		//
@@ -25,7 +28,7 @@ public class LeagueA extends FragmentActivity {
 		league.setId(85);
 		league.setName("西甲");
 		viewPager.setAdapter(new LeagueAdapter(getSupportFragmentManager(), league));
-		UnderlinePageIndicator viewIndicator = (UnderlinePageIndicator)findViewById(R.id.league_indicator);
+		TabPageIndicator viewIndicator = (TabPageIndicator)findViewById(R.id.league_indicator);
 		viewIndicator.setViewPager(viewPager);
 	}
 }
@@ -47,7 +50,12 @@ class LeagueAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public int getCount() {
-		return 3;
+		return 6;
+	}
+	
+	@Override
+    public CharSequence getPageTitle(int position) {
+		return "   标题标题   ";
 	}
 	
 }
