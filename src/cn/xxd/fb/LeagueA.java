@@ -45,7 +45,10 @@ class LeagueAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int position) {
-		return new LeagueBoardFragment();
+		switch(position){
+		case 1: return new LeagueMatchA();
+		}
+		return new LeagueBoardA();
 	}
 
 	@Override
@@ -55,7 +58,10 @@ class LeagueAdapter extends FragmentPagerAdapter {
 	
 	@Override
     public CharSequence getPageTitle(int position) {
-		return "   标题标题   ";
+		switch(position){
+		case 1: return "赛程";
+		}
+		return "积分榜";
 	}
 	
 }

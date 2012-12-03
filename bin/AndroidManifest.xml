@@ -50,8 +50,8 @@
             </intent-filter>
         </activity>
         
-        <activity android:name=".LeagueA" android:screenOrientation="portrait"  android:theme="@style/QTabPageIndicator"/>
-        <activity android:name=".LeagueBoardFragment" android:screenOrientation="portrait"  />
+        <activity android:name=".LeagueA" android:screenOrientation="portrait" />
+        <activity android:name=".LeagueBoardA" android:screenOrientation="portrait"  />
     </application>
 
 </manifest>

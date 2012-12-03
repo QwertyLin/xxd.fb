@@ -6,6 +6,8 @@ public class LeagueBoard {
 	private int number; //13场
 	private int win; //胜
 	private int lose; //负
+	private int gain; //得
+	private int loss; //失
 	
 	//平局
 	public int getDraw(){
@@ -39,6 +41,22 @@ public class LeagueBoard {
 	}
 	public void setLose(int lose) {
 		this.lose = lose;
+	}
+
+	public int getGain() {
+		return gain;
+	}
+
+	public void setGain(int gain) {
+		this.gain = gain;
+	}
+
+	public int getLoss() {
+		return loss;
+	}
+
+	public void setLoss(int loss) {
+		this.loss = loss;
 	}
 	
 	

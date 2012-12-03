@@ -16,11 +16,14 @@
  */
 package q.view;
 
+import cn.xxd.fb.R;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
@@ -249,6 +252,12 @@ public class TabPageIndicator extends HorizontalScrollView implements PageIndica
     	
         public TabView(Context context) {
 			super(context);
+			//TODO
+			setGravity(Gravity.CENTER);
+			setTextColor(getResources().getColorStateList(R.color.base_text_gray_blue));
+			setBackgroundResource(R.drawable.base_viewpage_tab_blue);
+			setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
+			setPadding(33, 18, 33, 18);
 		}
 
 		private int mIndex;
