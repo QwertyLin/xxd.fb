@@ -14,17 +14,17 @@ public class LeagueMatches {
 	private String[] teamHomes;//主队列表
 	private String[] teamGuests;//客队列表
 	
-	public List<LeagueMatch> getMatches(int runNumber){ //获得指定轮数的比赛列表
-		List<LeagueMatch> matches = new ArrayList<LeagueMatch>();
-		LeagueMatch match = null;
+	public List<Match> getMatches(int runNumber){ //获得指定轮数的比赛列表
+		List<Match> matches = new ArrayList<Match>();
+		Match match = null;
 		for(int i = 0; i < teamHomes.length; i++){
 	    	if(i / 10 == runNumber - 1){
-	    		match = new LeagueMatch();
+	    		match = new Match();
 	    		matches.add(match);
 	    		match.setTime(times[i]);
 	    		match.setScore(scores[i]);
-	    		match.setTeamHome(teamHomes[i]);
-	    		match.setTeamGuest(teamGuests[i]);
+	    		match.setHome(teamHomes[i]);
+	    		match.setGuest(teamGuests[i]);
 	    	}
 	    }
 		return matches;

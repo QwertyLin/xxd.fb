@@ -2,12 +2,13 @@ package cn.xxd.fb.adapter;
 
 import java.util.List;
 
+import q.base.AdapterBase;
+
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 import cn.xxd.fb.R;
 import cn.xxd.fb.bean.LeagueBoard;
-import q.util.AdapterBase;
 
 public class LeagueBoardAdapter extends AdapterBase<LeagueBoard, LeagueBoardAdapter.Holder> {
 	

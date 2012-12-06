@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/league_board_layout"
+    android:id="@+id/match_layout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal" 
@@ -12,76 +12,46 @@
     >
    
     <TextView 
-        android:id="@+id/league_board_club"
+        android:id="@+id/match_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="时间"
+        android:padding="5dip"
+        />
+    
+    <TextView 
+        android:id="@+id/match_home"
         android:layout_width="0dip"
         android:layout_weight="1"
-        android:layout_height="40dip"
-        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:text="球队"
         android:singleLine="true"
         android:ellipsize="end"
         />
     
     <TextView 
-        android:id="@+id/league_board_number"
-        android:layout_width="25dip"
+        android:id="@+id/match_score"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center_vertical"
-        android:text="1"
+        android:text="比分"
+        android:padding="5dip"
         />
     
     <TextView 
-        android:id="@+id/league_board_win"
-        android:layout_width="25dip"
+        android:id="@+id/match_guest"
+        android:layout_width="0dip"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center_vertical"
-        android:text="1"
+        android:text="球队"
+        android:singleLine="true"
+        android:ellipsize="end"
         />
     
-    <TextView 
-        android:id="@+id/league_board_draw"
-        android:layout_width="25dip"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:text="1"
-        />
-    
-    <TextView 
-        android:id="@+id/league_board_lose"
-        android:layout_width="25dip"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:text="1"
-        />
-    
-    <TextView 
-        android:id="@+id/league_board_gain"
-        android:layout_width="25dip"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:text="1"
-        />
-    
-    <TextView 
-        android:id="@+id/league_board_loss"
-        android:layout_width="25dip"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:text="1"
-        />
-    
-    <TextView 
-        android:id="@+id/league_board_score"
-        android:layout_width="25dip"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:text="1"
-        />
-
 </LinearLayout>

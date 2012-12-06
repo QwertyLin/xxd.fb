@@ -46,9 +46,9 @@ class LeagueAdapter extends FragmentPagerAdapter {
 	@Override
 	public Fragment getItem(int position) {
 		switch(position){
-		case 1: return new LeagueMatchA();
+		case 1: return new MatchF();
 		}
-		return new LeagueBoardA();
+		return new MatchF();
 	}
 
 	@Override
